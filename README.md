@@ -1,0 +1,1 @@
+En esta clase creamos 2 archivo, uno que simula un ciente y otro un servidor los cuales se conectan po rmedios de sockets, ademas a esto miramos un poco de la sintaxis de python y subimos los archivos a un repo en git
