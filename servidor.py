@@ -1,5 +1,6 @@
 import socket
 import threading
+import time
 
 contador_clientes = 0 #Recurso compartido
 lock = threading.Lock()
@@ -14,6 +15,11 @@ def handle_client(conn, addr):
             
         print(f"Cliente {numero} atendido desde {addr}")
         student_name = conn.recv(1024).decode()
+
+        #Ajuste del time de 5 seg
+        time.sleep(5)
+
+        #Variable con la respuesta
         response = f"Hola {student_name} eres el cliente numero {numero}"
         conn.sendall(response.encode())
     except Exception as e:
